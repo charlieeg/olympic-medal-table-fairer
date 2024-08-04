@@ -12,14 +12,15 @@
             padding: 20px;
             background-color: white;
             font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center all content in the body */
         }
 
         .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            text-align: center; /* Center text for smaller screens */
+            text-align: center;
+            width: 100%;
+            max-width: 800px; /* Limit header width for better centering */
         }
 
         .header-title {
@@ -41,16 +42,17 @@
         .olympics-logo {
             height: 50px; /* Adjust size as needed */
             margin: 30px auto;
+            display: block; /* Center image in the header container */
         }
 
         .table-container {
-            display: flex;
-            justify-content: center; /* Center table horizontally */
+            width: 100%;
+            max-width: 800px; /* Limit table width for better centering */
+            overflow-x: auto; /* Enable horizontal scroll on small screens */
         }
 
         table {
             width: 100%;
-            max-width: 800px; /* Limit the maximum width for better centering */
             border-collapse: collapse;
             margin: 20px 0;
             background-color: #fff;
@@ -91,12 +93,6 @@
             background-color: #f9f9f9;
         }
 
-        img.flag {
-            width: 30px; /* Adjust size as needed */
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
         .medal-icon {
             width: 20px; /* Adjust size as needed */
             vertical-align: middle;
@@ -122,12 +118,6 @@
 
         /* Media query for mobile devices */
         @media (max-width: 768px) {
-            .header-container {
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-
             .header-title {
                 font-size: 2em; /* Slightly smaller font size for mobile */
             }
@@ -138,14 +128,6 @@
 
             .olympics-logo {
                 height: 40px; /* Adjust size for mobile */
-            }
-
-            .table-container {
-                padding: 0 10px; /* Add padding for mobile to prevent overflow */
-            }
-
-            table {
-                width: 100%; /* Ensure table width fits within the container */
             }
         }
     </style>
