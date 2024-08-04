@@ -43,8 +43,14 @@
             margin: 30px auto;
         }
 
+        .table-container {
+            display: flex;
+            justify-content: center; /* Center table horizontally */
+        }
+
         table {
             width: 100%;
+            max-width: 800px; /* Limit the maximum width for better centering */
             border-collapse: collapse;
             margin: 20px 0;
             background-color: #fff;
@@ -133,6 +139,14 @@
             .olympics-logo {
                 height: 40px; /* Adjust size for mobile */
             }
+
+            .table-container {
+                padding: 0 10px; /* Add padding for mobile to prevent overflow */
+            }
+
+            table {
+                width: 100%; /* Ensure table width fits within the container */
+            }
         }
     </style>
 </head>
@@ -143,11 +157,7 @@
         <img src="logo.png" alt="Olympics Logo" class="olympics-logo">
     </div>
 
-    <!-- Your table and content here -->
-
-</body>
-</html>
-
+    <div class="table-container">
         <table>
             <thead>
                 <tr>
